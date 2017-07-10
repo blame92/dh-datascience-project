@@ -1,0 +1,21 @@
+.container-fluid { 
+        background-color: #1abc9c; /* Green */
+        color: #ffffff;
+    }
+
+body {
+    background-color: #000;
+}
+
+.bg-2 { 
+      background-color: #1abc9c; /* Green */
+      color: #ffffff;
+      padding-bottom: 10px;
+        
+}
+
+.size {
+      width: 200px;
+      height: 200px;
+      box-shadow: 10px 10px 5px #888888;
+    }
