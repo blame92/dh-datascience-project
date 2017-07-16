@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html >
 <head>
-  
+  <title>Searching for: {{ movie }}</title>
   
   
   <meta charset="UTF-8">
@@ -50,7 +50,10 @@
   </div>
     
     <div id="footer" class="row">
-      <button type="button" id="btn" class="btn boton disabled">See Results</button>
+      <form method="POST" action="{{ url_for('results') }}">
+        <button id="btn" class="btn boton disabled" type="submit">See Results</button>
+      </form>
+      
       <script type="text/javascript" src="{{ url_for('static', filename='js/hover_logic.js') }}"></script>
     </div>
     <div id="footer" class="row">

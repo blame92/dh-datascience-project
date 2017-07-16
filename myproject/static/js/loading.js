@@ -73,7 +73,7 @@ function easeInOut(t) {
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
-  var phrases = shuffleArray(["Cranking up machine", "Looking for Movie", "Grabbing Popcorn", "Looking for similar topics", "Almost There!", "Looking for similar movies", "Trying weird algorithms", "Does this actually work", "Returning Images"]);
+  var phrases = shuffleArray(["Cranking up machine", "Looking for Movie", "Grabbing Popcorn", "Looking for similar topics", "Almost There", "Looking for similar movies", "Trying weird algorithms", "Does this actually work", "Returning Images"]);
   addPhrasesToDocument(phrases);
   var start_time = new Date().getTime();
   var upward_moving_group = document.getElementById("phrases");

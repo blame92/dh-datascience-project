@@ -9,24 +9,42 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='styles/styles.css') }}">
+  
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+  
 </head>
 <body>
-    <div class="container-fluid text-center">
-    <h3>Trabajo Final Data Science</h3>
-    <img src="{{ url_for('static', filename='images/logo.jpg') }}" class= "img-circle size" alt="Movie">
-    
-    <div class="container-fluid bg-2 text-center">
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="https://flask-blam92.c9users.io/">Data Science Project</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="https://flask-blam92.c9users.io/">Home</a></li>
+            <li><a href="https://flask-blam92.c9users.io/topics">Topics</a></li>
+            <li><a href="#">Blog</a></li>
+        </ul>
+        </div>
+    </nav>
+    <div class="container-fluid text-center site">
+      <h3>Trabajo Final Data Science</h3>
+      <img src="{{ url_for('static', filename='images/logo.jpg') }}" class= "img-circle size" alt="Movie">
+    </div>
+    <div class="container-fluid bg-2 text-center site">
     <h1>Search For Movie Recommendations</h3>
     <h1>{{ test }}</h1>
     
-    <form class="form-inline" method="POST">
+    <form class="form-inline" method="POST" action="{{ url_for('loading') }}">
       <div class="form-group">
-        <input type="movie" class="form-control" name="movie" placeholder= "Enter Movie Title">
+        <input id="autocomplete" type="movie" class="form-control typeahead" name="movie" placeholder= "Enter Movie Title">
         <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span>    Search</button>
       </div>
-    </div>
     </form>
   </div>
+  <script src="{{ url_for('static', filename='js/autocomplete.js') }}"></script>
 
 </body>
 </html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Data Science Final Project</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='styles/styles.css') }}">
+  
+  
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="https://flask-blam92.c9users.io/">Data Science Project</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="https://flask-blam92.c9users.io/">Home</a></li>
+            <li><a href="https://flask-blam92.c9users.io/topics">Topics</a></li>
+            <li><a href="#">Blog</a></li>
+        </ul>
+        </div>
+    </nav>
+    <div class="container-fluid text-center site">
+      <h3>Trabajo Final Data Science</h3>
+      <img src="{{ url_for('static', filename='images/logo.jpg') }}" class= "img-circle size" alt="Movie">
+    </div>
+    <div class="container-fluid bg-2 text-center site">
+    {% for i in res %}
+    <p>{{ i }}</p>
+    {% endfor %}
+    </div>
+
+</body>
+</html>
