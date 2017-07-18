@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='styles/styles.css') }}">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='styles/styles_results.css') }}">
   
   
 </head>
@@ -19,20 +19,52 @@
           <a class="navbar-brand" href="https://flask-blam92.c9users.io/">Data Science Project</a>
         </div>
         <ul class="nav navbar-nav">
-            <li class="active"><a href="https://flask-blam92.c9users.io/">Home</a></li>
+            <li><a href="https://flask-blam92.c9users.io/">Home</a></li>
             <li><a href="https://flask-blam92.c9users.io/topics">Topics</a></li>
             <li><a href="#">Blog</a></li>
         </ul>
         </div>
     </nav>
-    <div class="container-fluid text-center site">
-      <h3>Trabajo Final Data Science</h3>
-      <img src="{{ url_for('static', filename='images/logo.jpg') }}" class= "img-circle size" alt="Movie">
+    <div class="container">
+  <div class="jumbotron">
+    <h1>Results</h1> 
+    <p>Movie Recommendations for <strong>{{ original }}</strong></p> 
+  </div>
+</div>
+    <div class="row text-center padd">
+      
+  <div class="col-sm-4">
+    <div class="thumbnail">
+      <img src="{{ url_for('static', filename='images/martin_rios.jpeg') }}" alt="Paris">
+      <p><strong>{{ recommendations1 }}</strong></p>
+      <form style="display: inline" action="{{ cinema_link1 }}" method="get" target="_blank">
+        <button class="btn">See Movie</button>
+      </form>
     </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="thumbnail">
+      <img src="{{ url_for('static', filename='images/martin_rios.jpeg') }}" alt="New York">
+      <p><strong> {{ recommendations2 }}</strong></p>
+      <form style="display: inline" action="{{ cinema_link2 }}" method="get" target="_blank">
+        <button class="btn">See Movie</button>
+      </form>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="thumbnail">
+      <img src="{{ url_for('static', filename='images/martin_rios.jpeg') }}" alt="San Francisco">
+      <p><strong> {{ recommendations3 }}</strong></p>
+      <form style="display: inline" action="{{ cinema_link3 }}" method="get" target="_blank">
+        <button class="btn">See Movie</button>
+      </form>
+    </div>
+  </div>
+</div>
+
     <div class="container-fluid bg-2 text-center site">
-    {% for i in res %}
-    <p>{{ i }}</p>
-    {% endfor %}
+  
+    
     </div>
 
 </body>

@@ -1,15 +1,19 @@
 .site { 
         /* Green */
         color: #ffffff;
+        background-color: #1abc9c;
+        padding-bottom: 100px;
+        margin-top: 0px;
     }
-
-body {
-    background-color: #1abc9c;
+.navbar {
+    margin-bottom: 0px;
 }
+
 
 .bg-2 { 
       color: #ffffff;
       padding-bottom: 10px;
+      background-color: #1abc9c;
         
 }
 
@@ -19,3 +23,19 @@ body {
       box-shadow: 10px 10px 5px #888888;
       
     }
+    
+.person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.9;
+}
+.person:hover {
+    border-color: #f1f1f1;
+}
+
+.team {
+    background-color: black;
+    color: white;
+}

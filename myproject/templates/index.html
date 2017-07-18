@@ -35,7 +35,6 @@
     </div>
     <div class="container-fluid bg-2 text-center site">
     <h1>Search For Movie Recommendations</h3>
-    <h1>{{ test }}</h1>
     
     <form class="form-inline" method="POST" action="{{ url_for('loading') }}">
       <div class="form-group">
@@ -44,6 +43,24 @@
       </div>
     </form>
   </div>
+  <div class="container-fluid text-center team">
+  <h3>THE TEAM</h3>
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+      <p><strong>PAOLO</strong></p><br>
+      <img src="{{ url_for('static', filename='images/paolo.jpeg') }}" class="img-circle person" alt="Paolo">
+    </div>
+    <div class="col-sm-4">
+      <p><strong>MARTIN</strong></p><br>
+      <img src="{{ url_for('static', filename='images/martin_rios.jpeg') }}" class="img-circle person" alt="Martin">
+    </div>
+    <div class="col-sm-4">
+      <p><strong>SANTIAGO</strong></p><br>
+      <img src="{{ url_for('static', filename='images/santi.jpeg') }}" class="img-circle person" alt="Santiago">
+    </div>
+  </div>
+</div>
   <script src="{{ url_for('static', filename='js/autocomplete.js') }}"></script>
 
 </body>
